@@ -330,6 +330,10 @@ export type PluginRuntime = {
       handleWhatsAppAction: HandleWhatsAppAction;
       createLoginTool: CreateWhatsAppLoginTool;
     };
+    feishu: {
+      sendMessageFeishu: (to: string, text: string) => Promise<any>;
+      monitorFeishuProvider: (params: any) => Promise<any>;
+    };
     line: {
       listLineAccountIds: ListLineAccountIds;
       resolveDefaultLineAccountId: ResolveDefaultLineAccountId;

@@ -1,0 +1,11 @@
+{
+  "name": "@openclaw/feishu",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "OpenClaw Feishu channel plugin",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

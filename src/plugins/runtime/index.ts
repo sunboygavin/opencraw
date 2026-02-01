@@ -318,6 +318,16 @@ export function createPluginRuntime(): PluginRuntime {
         handleWhatsAppAction,
         createLoginTool: createWhatsAppLoginTool,
       },
+      feishu: {
+        sendMessageFeishu: async (to: string, text: string) => {
+          console.log(`[Feishu] Sending to ${to}: ${text}`);
+          return { success: true };
+        },
+        monitorFeishuProvider: async (params: any) => {
+          console.log(`[Feishu] Starting monitor for ${params.accountId}`);
+          return { stop: async () => {} };
+        },
+      },
       line: {
         listLineAccountIds,
         resolveDefaultLineAccountId,
